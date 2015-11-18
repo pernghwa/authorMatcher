@@ -1,0 +1,5 @@
+numpy==
+sklearn==
+elasticsearch==
+flask==
+tweepy==

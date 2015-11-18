@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block js_head %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/d3.v3.min.js') }}"></script>
+{% endblock %}
+
+{% block sidepanel %}
+{% endblock %}
+
+{% block content %}
+<input type="hidden" id="uid" value="{{uid}}"></input>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="container-fluid">
+      <p class="navbar-text" id='qinfo'></p>
+      <input class="btn btn-default" type="button" onclick="submit_validation(1);" value="Submit" style="float:right;margin:auto;"></input>
+      <input class="btn btn-default" type="button" onclick="submit_validation(0);" value="Unsure" style="float:right;margin:auto;"></input>
+    </div>
+  </nav>
+  <div id="choices" class="col12 bigbar">
+  </div>
+{% endblock %}
+
+{% block js %}
+  <script>
+  var get_fresh_id_url = "{{url_for('fresh_id')}}";
+  var submit_url = "{{url_for('submit_validation')}}";
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/human_eval.js') }}"></script>
+{% endblock %}
