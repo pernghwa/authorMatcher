@@ -203,4 +203,4 @@ if __name__ == "__main__":
     matcher = authorMatcher(soft=True)
     # try load model
     #
-    matcher.
+    #matcher.
